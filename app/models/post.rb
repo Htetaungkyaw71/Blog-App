@@ -3,7 +3,12 @@ class Post < ApplicationRecord
   has_many :likes
   has_many :comments
 
-  after_save :update_postcounter, :recent_five_comments
+  validates :title, presence: true, length: { in: 0..250 }
+  validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
+
+  after_save :update_postcounter
 
   def recent_five_comments
     comments.last(5)
