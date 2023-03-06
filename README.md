@@ -69,13 +69,6 @@ After you're finished please remove all the comments and instructions!
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
   <summary>Server</summary>
   <ul>
     <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
@@ -92,8 +85,6 @@ After you're finished please remove all the comments and instructions!
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-
-> Describe between 1-3 key features of the application.
 
 - **[Create Post]**
 - **[Add like]**
@@ -114,8 +105,6 @@ After you're finished please remove all the comments and instructions!
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
@@ -142,7 +131,7 @@ Install this project with:
 
 ```sh
   cd Blog-App
-  gem install
+  bundle install
 ```
 
 ### Usage
@@ -179,8 +168,6 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Htetaungkyaw**
 
 - GitHub: [@githubhandle](https://github.com/Htetaungkyaw71/)
@@ -191,8 +178,6 @@ Example:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[Auth]**
 - [ ] **[Pagination]**
@@ -214,8 +199,6 @@ Feel free to check the [issues page](https://github.com/Htetaungkyaw71/Blog-App/
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
 If you like this project, you can give star this repo.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -223,8 +206,6 @@ If you like this project, you can give star this repo.
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank microverse for supporting to do this project.
 
@@ -251,7 +232,5 @@ I would like to thank microverse for supporting to do this project.
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./MIT.md) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
