@@ -1,1 +1,15 @@
 <h1>Here is a given user</h1>
+
+
+
+<%= @user.name %> <br>
+
+<%= @user.bio %> <br>
+
+
+<% @user.posts.each do |post| %>
+    <a href=<%= "/users/#{@user.id}/posts/#{post.id}" %>>
+        <%= post.id %> 
+        <%= post.text %> <br>
+    </a>
+<% end %>

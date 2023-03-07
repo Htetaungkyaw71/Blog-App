@@ -1,1 +1,9 @@
 <h1>Here is a detail of post</h1>
+
+<%= @post.id %> 
+<%= @post.text %> <br>
+
+<% @post.comments.each do |comment| %>
+        <%= comment.author.name %> 
+        <%= comment.text %> <br>
+<% end %>

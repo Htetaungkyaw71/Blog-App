@@ -1,1 +1,16 @@
-<h1>Here is a list of posts for a given user</h1>
+<h1>All posts</h1>
+
+
+
+<%= @user.name %> <br>
+
+<% @posts.each do |post| %>
+    <a href=<%= "/users/#{@user.id}/posts/#{post.id}" %>>
+        <%= post.id %> 
+        <%= post.text %> <br>
+    </a>
+        <% post.comments.each do |comment| %>
+        <%= comment.author.name %> 
+        <%= comment.text %> <br>
+        <% end %>
+<% end %>
