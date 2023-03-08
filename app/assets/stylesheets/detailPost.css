@@ -1,0 +1,11 @@
+.detailPost {
+  border: 2px solid black;
+  padding: 10px;
+  padding: 20px;
+  padding-right: 20px;
+}
+
+.detailPost h3 {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,1 +1,35 @@
 <h1>Here is a detail of post</h1>
+
+
+<div class="detailPost">
+        <h3>
+        <span>
+          <%= @post.title %> by <%= @user.name %>     
+        </span>
+        <span>
+                comments : <%= @post.comments_counter %>
+                likes : <%= @post.likes_counter %>
+        </span>
+          
+        </h3>
+            <p class="likes">
+               
+        </p>
+        <p>
+            <%= @post.text %>
+        </p>
+</div>
+
+<% if @post.comments_counter != 0 %>
+        <p class="comments">
+         <% @post.comments.each do |comment| %>
+   
+        <b>
+        <%= comment.author.name %> :
+        </b> 
+        <%= comment.text %>
+        <br>
+        <% end %>
+        </p>
+<% end %>
+      

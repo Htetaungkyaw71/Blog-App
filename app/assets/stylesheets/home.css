@@ -1,0 +1,33 @@
+body {
+  padding: 20px 100px 20px 100px;
+  box-sizing: border-box;
+}
+
+.userDiv {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.imgDiv img {
+  width: 130px;
+  height: 130px;
+}
+
+.usertextDiv {
+  border: 2px solid black;
+  width: 100%;
+  margin-left: 30px;
+  text-decoration: none;
+  color: black;
+  height: 96px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.usertextDiv p {
+  text-align: right;
+  padding-right: 30px;
+  font-size: 22px;
+  font-weight: bold;
+}
