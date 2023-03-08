@@ -1,15 +1,51 @@
-<h1>Here is a given user</h1>
+<h1>Here is a detail of user</h1>
+
+
+<div class="userDiv">
+    <div class="imgDiv">
+        <img src="<%= @user.photo %>">
+    </div>
+     <a href=<%= "/users/#{@user.id}" %> class="usertextDiv">  
+     <h1>
+        <%= @user.name %>
+     </h1>  
+     <p>
+        Number of posts : <%= @user.posts_counter %>
+     </p>
+      </a>
+</div>
+
+<div class="bio">
+    <h3>
+        Bio
+    </h3>
+    <p>
+        <%= @user.bio %>
+    </p>
+</div>
 
 
 
-<%= @user.name %> <br>
-
-<%= @user.bio %> <br>
 
 
 <% @user.posts.each do |post| %>
-    <a href=<%= "/users/#{@user.id}/posts/#{post.id}" %>>
-        <%= post.id %> 
-        <%= post.text %> <br>
+    <a href=<%= "/users/#{@user.id}/posts/#{post.id}" %> class="postDiv">
+        <h3>
+            <%= post.title %>
+        </h3>
+        <p>
+            <%= post.text %>
+        </p>
+        <p class="likes">
+        comments : <%= post.comments_counter %>
+        likes : <%= post.likes_counter %>
+        </p>
+       
     </a>
 <% end %>
+
+<p class="seeBtn">
+    <a class="see">
+        See all posts
+    </a>
+</p>
