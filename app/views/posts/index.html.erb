@@ -15,10 +15,6 @@
       </a>
 </div>
 
-        <button class="add_post">
-            <%= link_to "Add a post", new_user_post_path(@user) %>
-        </button>
-
 <% @posts.each do |post| %>
     <a href=<%= "/users/#{@user.id}/posts/#{post.id}" %> class="postDiv">
         <h3>
@@ -49,8 +45,4 @@
    
 <% end %>
 
-<p class="seeBtn">
-    <a class="see">
-        See all posts
-    </a>
-</p>
+
