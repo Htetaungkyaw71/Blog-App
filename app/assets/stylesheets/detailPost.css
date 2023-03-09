@@ -1,6 +1,5 @@
 .detailPost {
   border: 2px solid black;
-  padding: 10px;
   padding: 20px;
   padding-right: 20px;
 }
@@ -8,4 +7,18 @@
 .detailPost h3 {
   display: flex;
   justify-content: space-between;
+}
+
+.likeDiv {
+  display: flex;
+  padding: 20px;
+}
+
+.likeDiv a {
+  text-decoration: none;
+  color: black;
+}
+
+.likeDiv button {
+  margin-left: 10px;
 }

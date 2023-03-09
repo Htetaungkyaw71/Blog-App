@@ -3,22 +3,31 @@
 
 <div class="detailPost">
         <h3>
+        
         <span>
           <%= @post.title %> by <%= @user.name %>     
         </span>
+
         <span>
-                comments : <%= @post.comments_counter %>
-                likes : <%= @post.likes_counter %>
+          comments : <%= @post.comments_counter %>
+          likes : <%= @post.likes_counter %>
         </span>
           
         </h3>
-            <p class="likes">
-               
+            <p class="likes">          
         </p>
+
         <p>
             <%= @post.text %>
         </p>
 </div>
+        <div class="likeDiv">
+                <%= render 'likes/new', local:{post:@post} %>
+                <button>
+                <%= link_to "Add a comment", new_user_post_comment_path(@user, @post) %>
+                </button>
+        </div>
+
 
 <% if @post.comments_counter != 0 %>
         <p class="comments">

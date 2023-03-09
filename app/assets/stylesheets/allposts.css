@@ -4,3 +4,13 @@
   padding: 10px;
   padding-left: 20px;
 }
+
+.add_post {
+  margin-bottom: 10px;
+}
+
+.add_post a {
+  text-decoration: none;
+  color: black;
+  margin-bottom: 10px;
+}
