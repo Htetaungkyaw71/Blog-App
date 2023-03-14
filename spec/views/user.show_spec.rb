@@ -12,6 +12,7 @@ RSpec.describe User, type: :system do
     end
     it "I can see the user's profile picture." do
       expect(page.find('img')['src']).to have_content('https://unsplash.com/photos/F_-0BxGuVvo')
+      page.has_css?('.profile_image')
     end
     it "I can see the user's username." do
       expect(page).to have_content(@first_person.name)

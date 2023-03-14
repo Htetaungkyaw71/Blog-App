@@ -13,7 +13,7 @@ RSpec.describe Post, type: :system do
       visit("/users/#{@first_person.id}/posts/#{@first_post.id}")
     end
     it 'I can see who wrote the post' do
-      expect(page).to have_content(@first_person.name)
+      expect(page).to have_content(@first_post.author.name)
     end
     it 'I can see post title.' do
       expect(page).to have_content(@first_post.title)
