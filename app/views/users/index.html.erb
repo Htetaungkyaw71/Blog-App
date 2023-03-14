@@ -7,7 +7,7 @@
 <% @users.each do |user| %>
 <div class="userDiv">
     <div class="imgDiv">
-        <img src="<%= user.photo %>">
+        <img src="<%= user.photo %>" class="profile_image">
     </div>
      <a href=<%= "/users/#{user.id}" %> class="usertextDiv">  
      <h1>

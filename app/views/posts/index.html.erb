@@ -15,7 +15,7 @@
       </a>
 </div>
 
-<% @posts.each do |post| %>
+<% @user.posts.each do |post| %>
     <a href=<%= "/users/#{@user.id}/posts/#{post.id}" %> class="postDiv">
         <h3>
             <%= post.title %>
@@ -44,5 +44,10 @@
       
    
 <% end %>
+
+<p class="seeBtn">
+    Pagination
+</p>
+
 
 

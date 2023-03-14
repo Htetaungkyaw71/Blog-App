@@ -133,7 +133,14 @@ To run tests, run the following command:
 👤 **Htetaungkyaw**
 
 - GitHub: [@githubhandle](https://github.com/Htetaungkyaw71/)
+- Linkedin: [@linkedinhandle](https://www.linkedin.com/in/htetakyaw/)
 - Twitter: [@twitterhandle](https://twitter.com/Htetaungkyaw172)
+
+👤 **Suzana Marsela**
+
+- GitHub: [@githubhandle](https://github.com/Suzi216)
+- Linkedin: [@linkedinhandle](https://tr.linkedin.com/in/suzana-marsela)
+- Twitter: [@twitterhandle](https://twitter.com/suzanamarsela)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
