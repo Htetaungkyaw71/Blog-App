@@ -9,6 +9,10 @@
   margin-bottom: 10px;
 }
 
+.field input {
+  width: 97%;
+}
+
 .link {
   margin-top: 10px;
 }
@@ -16,4 +20,8 @@
 .alert,
 .notice {
   text-align: center;
+}
+
+.actions input {
+  width: 100%;
 }
