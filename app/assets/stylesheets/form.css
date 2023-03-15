@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.link {
+  margin-top: 10px;
+}
+
+.alert,
+.notice {
+  text-align: center;
+}
