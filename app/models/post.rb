@@ -9,17 +9,17 @@ class Post < ApplicationRecord
 
   after_save :update_postcounter
   after_destroy :destroy_postcounter
-  
+
   def recent_five_comments
     comments.last(5)
   end
-  
+
   private
-  
+
   def update_postcounter
     author.increment!(:posts_counter)
   end
-  
+
   def destroy_postcounter
     author.decrement!(:posts_counter)
   end

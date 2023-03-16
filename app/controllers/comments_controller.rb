@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   load_and_authorize_resource
-  
+
   def new
     @comment = Comment.new
   end
@@ -18,21 +18,20 @@ class CommentsController < ApplicationController
     end
   end
 
-  def destroy 
+  def destroy
     @comment = Comment.find(params[:id])
     @post = Post.find(params[:post_id])
-    if @comment.destroy
-      flash[:success] = 'Successfully deleted'
-      redirect_to user_post_url(current_user,@post)
-    else 
-      flash[:success] = 'Post deletion failed'
-      redirect_to user_post_url(current_user,@post)
-    end
+    flash[:success] = if @comment.destroy
+                        'Successfully deleted'
+                      else
+                        'Post deletion failed'
+                      end
+    redirect_to user_post_url(current_user, @post)
   end
 
   private
+
   def comment_params
     params.require(:comment).permit(:text)
   end
-
 end
