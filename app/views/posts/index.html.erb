@@ -29,18 +29,29 @@
         </p>
        
     </a>
-    <% if post.comments_counter != 0 %>
+   
+<% if post.comments_counter != 0 %>
         <p class="comments">
          <% post.comments.each do |comment| %>
-   
+        <div class="inner-comment">
+        <div>
         <b>
         <%= comment.author.name %> :
         </b> 
-        <%= comment.text %>
-        <br>
+        <span>
+           <%= comment.text %>
+        </span>
+        </div>
+     
+        <% if can? :destroy, comment %>
+                <%= button_to('Destroy', user_post_comment_path(@user, post,comment),
+                method: "delete", remote: true, data: { confirm: 'Are you sure?'}) %>
+        <% end %>
+        </div>
+       
         <% end %>
         </p>
-    <% end %>
+<% end %>
       
    
 <% end %>

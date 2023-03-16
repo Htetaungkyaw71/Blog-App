@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def index
     @user = User.includes(posts: [:comments]).find(params[:user_id])
   end
@@ -13,13 +14,31 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new(params.require(:post).permit(:title, :text))
-    post.author_id = current_user.id
-    if post.save
+    @post = Post.new(post_params)
+    @post.author_id = current_user.id
+    if @post.save
       flash[:success] = 'New post successfully added!'
-      redirect_to user_post_url(current_user, post)
+      redirect_to user_post_url(current_user, @post)
     else
       redirect_to new_user_post_url, notice: 'Post creation failed'
     end
   end
+
+  def destroy 
+    @post = Post.find(params[:id])
+    if @post.destroy
+      flash[:success] = 'Successfully deleted'
+      redirect_to user_posts_url(current_user)
+    else 
+      flash[:success] = 'Post deletion failed'
+      redirect_to user_posts_url(current_user)
+    end
+  end
+
+  private 
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
+  
+
 end
