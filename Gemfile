@@ -76,6 +76,7 @@ end
 
 gem 'cancancan'
 gem 'devise'
+gem 'rswag'
 
 
 
